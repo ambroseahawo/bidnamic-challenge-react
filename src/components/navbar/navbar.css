@@ -1,0 +1,58 @@
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 65vw;
+    /* means 65% of the viewport width*/
+    justify-content: end;
+    /* It defines the alignment along the main axis. 
+                            It helps distribute extra free space leftover when either all the flex items on a line are inflexible, 
+                            or are flexible but have reached their maximum size. */
+    margin-right: 0.5rem;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.navbar {
+    background: #000000;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.nav-links-mobile {
+    display: none;
+}
+
+.nav-links {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-logo {
+    color: #fff;
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+/* Hover Effects */
+.nav-links:hover {
+    color: green;
+    transition: all 0.2s ease-in-out;
+}

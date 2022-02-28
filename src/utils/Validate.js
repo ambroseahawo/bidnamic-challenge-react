@@ -19,10 +19,10 @@ export const validateOver18 = (dateString) => {
 
 export const validateFormField = (formData) => {
 	if(isNaN(formData)){
-		if(formData.length < 31){
+		if(formData.length < 26){
 			return true
 		}else{
-			return { truthy: false, message: "should not exceed 30 characters" }
+			return { truthy: false, message: "should not exceed 25 characters" }
 		}
 	}else{
 		return { truthy: false, message: "should be a string" }

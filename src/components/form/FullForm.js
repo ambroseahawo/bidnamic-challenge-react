@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import APIService from "../../utils/APIService"
 import { useCookies } from "react-cookie"
-import { validateResponse, validateFullForm } from "../../utils/Validate"
+import APIService from "../../utils/APIService"
+import { validateFullForm, validateResponse } from "../../utils/Validate"
 
 const FullForm = (props) => {
     const [cookies] = useCookies(['loginToken'])
@@ -53,7 +53,7 @@ const FullForm = (props) => {
 			// send POST request to create details
 			APIService.PostDetails(cookies.loginToken, userData)
 					.then((resp) => {
-						console.log(resp)
+						// console.log(resp)
 						validateResponse(resp, formData, setResponseError, setErrorMessage)
 					})
 					// .catch((error) => console.log(error))
